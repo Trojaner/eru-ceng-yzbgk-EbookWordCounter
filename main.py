@@ -12,6 +12,8 @@ Kesme işareti ile ayrılan ekleri de ayırt edebilir.
    Sadece UTF-8 bazlı dosyalar için çalışır ve PDF, EPUB, docx ve txt dosyaları desteklenir.
 
    Normal ekleri ayırt edemez. Örneğin: 'olmadı' ve 'olmadığı' ayrı kelime diye algılanır.
+
+   Not: PDF'lerde doğru sonuç vermeyebiliyor.
 """
 
 from os import listdir

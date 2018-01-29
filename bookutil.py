@@ -25,7 +25,7 @@ def get_text(file_path: str):
         return None
 
     elif extension == ".pdf":
-        pdf_file = open(file_path, "r")
+        pdf_file = open(file_path, "rb")
         read_pdf = PyPDF2.PdfFileReader(pdf_file)
         number_of_pages = read_pdf.getNumPages()
         for x in range(number_of_pages):
@@ -38,7 +38,7 @@ def get_text(file_path: str):
         text_file = open(file_path, "r", encoding="utf-8")
         text += text_file.read()
 
-    text = text.strip()
+    text = text.strip().rstrip().replace('\n', '')
     return text
 
 
@@ -48,7 +48,7 @@ def count_words_in_text(text: str, wordlist: list):
 
     words_count = {}
     for word in wordlist:
-        word = word.rstrip()
+        word = word.strip().rstrip().replace('\n', '')
         words_count[word] = len(re.findall("(?i)\s" + re.escape(word) + "(\s|\.|!|\?|\')", text))
 
     sorted_words_count = [(k, words_count[k]) for k in sorted(words_count, key=words_count.get, reverse=True)]
