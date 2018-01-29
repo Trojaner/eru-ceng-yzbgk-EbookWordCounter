@@ -13,7 +13,6 @@ def get_text(file_path: str):
     text = ""
 
     if extension == ".epub":
-        print("Detected EPUB format")
         book = epub.read_epub(file_path)
         for doc in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
             text += doc.get_content().decode("utf-8")
