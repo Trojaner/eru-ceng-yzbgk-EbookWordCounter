@@ -1,3 +1,0 @@
-[submodule "lib/mobi-python"]
-	path = lib/mobi-python
-	url = https://github.com/kroo/mobi-python
