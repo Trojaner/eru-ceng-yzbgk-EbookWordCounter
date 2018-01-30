@@ -5,9 +5,9 @@
 
    'books' klasöründeki kitaplarda ./data/encok.txt'deki kelimerin ne kadar çok geçtiğini sayar
 ve dosya-adı-count.txt'e kaydeder.
-   Regex harflerin başka bir kelimenin içinde mi, yoksa kendi başına kelime oluşturduğu mu ayırt edilir.
-Kelimenin cümle sonunda boşluk olup olmadığını dikkate alınır (yani ardından boşluk olması şart değil).
-Kesme işareti ile ayrılan ekleri de ayırt edebilir.
+   Regex ile harflerin başka bir kelimenin içinde mi, yoksa kendi başına kelime oluşturduğu mu ayırt edilir.
+Kelimenin cümle sonunda olup olmadığını dikkate alınır (yani ardından boşluk olması şart değil).
+Kesme işareti ile ayrılan ekleri de ayırt eder.
    Şu regexe göre her kelimenin ne kadar çok geçtiğini bulunur: (?i)\s\QKELİME\E(\s|\.|!|\?|\')
    Sadece UTF-8 bazlı dosyalar için çalışır ve PDF, EPUB, docx ve txt dosyaları desteklenir.
 
